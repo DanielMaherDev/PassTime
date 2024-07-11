@@ -1,0 +1,1127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f4e8;
+    font-family: 'Cinzel', serif;
+    /* Update to a more historical font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root,
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    /* Adjusted width for better styling */
+    height: 90%;
+    background: #f5deb3;
+    /* Parchment-like background color */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for header */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #5a3312;
+    /* Slightly darker for border */
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #8b4513;
+    /* Dark brown border for images */
+    border-radius: 10px;
+}
+
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    /* Dark brown for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f5deb3;
+    /* Parchment-like background */
+    color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.hint-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for footer */
+    color: #fff;
+    border-top: 2px solid #5a3312;
+    /* Slightly darker for border */
+}
+
+.score-display {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #8b4513;
+    /* Dark brown text for buttons */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f4e8;
+    font-family: 'Cinzel', serif;
+    /* Update to a more historical font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root,
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    /* Adjusted width for better styling */
+    height: 90%;
+    background: #f5deb3;
+    /* Parchment-like background color */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    /* Ensure child elements are positioned relative to this container */
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for header */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #5a3312;
+    /* Slightly darker for border */
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #8b4513;
+    /* Dark brown border for images */
+    border-radius: 10px;
+}
+
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    /* Dark brown for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f5deb3;
+    /* Parchment-like background */
+    color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.hint-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for footer */
+    color: #fff;
+    border-top: 2px solid #5a3312;
+    /* Slightly darker for border */
+    position: absolute;
+    /* Position footer absolutely */
+    bottom: 0;
+    /* Stick footer to the bottom */
+    left: 0;
+    right: 0;
+}
+
+.score-display {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #8b4513;
+    /* Dark brown text for buttons */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f4e8;
+    font-family: 'Cinzel', serif;
+    /* Update to a more historical font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root,
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    /* Adjusted width for better styling */
+    height: 90%;
+    background: #f5deb3;
+    /* Parchment-like background color */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    /* Ensure child elements are positioned relative to this container */
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for header */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #5a3312;
+    /* Slightly darker for border */
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #8b4513;
+    /* Dark brown border for images */
+    border-radius: 10px;
+}
+
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    /* Dark brown for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f5deb3;
+    /* Parchment-like background */
+    color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.hint-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for footer */
+    color: #fff;
+    border-top: 2px solid #5a3312;
+    /* Slightly darker for border */
+    position: absolute;
+    /* Position footer absolutely */
+    bottom: 0;
+    /* Stick footer to the bottom */
+    left: 0;
+    right: 0;
+}
+
+.score-display {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #8b4513;
+    /* Dark brown text for buttons */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f4e8;
+    font-family: 'Cinzel', serif;
+    /* Update to a more historical font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root,
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background: #f5deb3;
+    /* Parchment-like background color */
+    border: none;
+    /* Remove border */
+    border-radius: 0;
+    /* Remove border radius */
+    overflow: hidden;
+    position: relative;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    /* Constrain width */
+    height: 90%;
+    /* Constrain height */
+    background: #fff;
+    /* White background */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for header */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #5a3312;
+    /* Slightly darker for border */
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #8b4513;
+    /* Dark brown border for images */
+    border-radius: 10px;
+}
+
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    /* Dark brown for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f5deb3;
+    /* Parchment-like background */
+    color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.hint-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for footer */
+    color: #fff;
+    border-top: 2px solid #5a3312;
+    /* Slightly darker for border */
+    position: absolute;
+    /* Position footer absolutely */
+    bottom: 0;
+    /* Stick footer to the bottom */
+    left: 0;
+    right: 0;
+}
+
+.score-display {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #8b4513;
+    /* Dark brown text for buttons */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f4e8;
+    font-family: 'Cinzel', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root,
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Center the inner container */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background: #f5deb3;
+    /* Parchment-like background color */
+    position: relative;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    /* Constrain width */
+    height: 90%;
+    /* Constrain height */
+    background: #fff;
+    /* White background */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for header */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #5a3312;
+    /* Slightly darker for border */
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #8b4513;
+    /* Dark brown border for images */
+    border-radius: 10px;
+}
+
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    /* Dark brown for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f5deb3;
+    /* Parchment-like background */
+    color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.hint-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for footer */
+    color: #fff;
+    border-top: 2px solid #5a3312;
+    /* Slightly darker for border */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.score-display {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #8b4513;
+    /* Dark brown text for buttons */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f4e8;
+    font-family: 'Cinzel', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root,
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background: #f5deb3;
+    /* Parchment-like background color */
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for header */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #5a3312;
+    /* Slightly darker for border */
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #faf0e6;
+    /* Light parchment color */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #8b4513;
+    /* Dark brown border for images */
+    border-radius: 10px;
+}
+
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    /* Dark brown for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f5deb3;
+    /* Parchment-like background */
+    color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.hint-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #8b4513;
+    /* Dark brown for footer */
+    color: #fff;
+    border-top: 2px solid #5a3312;
+    /* Slightly darker for border */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.score-display {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #8b4513;
+    /* Dark brown text for buttons */
+    border: 2px solid #8b4513;
+    /* Dark brown border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
